@@ -4,7 +4,9 @@ import matplotlib.pyplot as plt
 plt.style.use("default")
 
 def Angulo (X_,Y_,N_):
-    alpha = [[],[],[],[],[],[],[],[],[]]
+    alpha = []
+    for i in range (N_):
+        alpha.append([])
     for fil in range (N_):
         for col in range (N_):
             if X_[fil][col] == 0:
