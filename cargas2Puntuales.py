@@ -19,8 +19,8 @@ def Angulo (X_,Y_,N_):
     return alpha
   
 N = 9
-grid_min = -2
-grid_max = 2
+gridMin = -2
+gridMax = 2
 
 x = np.linspace(gridMin,gridMax,N)
 y = np.linspace(gridMin,gridMax,N)
