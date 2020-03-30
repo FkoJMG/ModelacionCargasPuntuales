@@ -19,7 +19,14 @@ def Angulo (X_,Y_,N_):
             else:
                 alpha[fil].append(np.arctan(Y_[fil][col]/X_[fil][col]))
     return alpha
-  
+
+def Color(carga):
+    if carga > 0:
+        color = 'red'
+    else:
+        color = 'black'
+    return color
+
 N = 9
 gridMin = -2
 gridMax = 2
@@ -61,8 +68,8 @@ Ey_unit = Ey/mags
 
 fig, ax = plt.subplots(figsize=(7,7))
 ax.quiver(X,Y,Ex_unit,Ey_unit)
-ax.scatter(q_loc[0],q_loc[1],c='red',s=1000)
-ax.scatter(q2_loc[0],q2_loc[1],c='blue',s=1000)
+ax.scatter(q_loc[0],q_loc[1],c=Color(q),s=1000)
+ax.scatter(q2_loc[0],q2_loc[1],c=Color(q2),s=1000)
 ax.axis([-2,2,-2,2])
 ax.set_aspect('equal','box')
 
